@@ -12,6 +12,9 @@ app.get("/", (req, res) => {
 app.get("/", (req, res) => {
   res.send("API is not running..");
 });
+app.get("/", (req, res) => {
+  res.send("API is not running..");
+});
 
 
 
