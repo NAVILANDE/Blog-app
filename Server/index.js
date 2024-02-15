@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import connectToMongo from "./config/db.js";
 import authRoutes from "./routes/blog.js"
 const app = express();
@@ -9,7 +10,8 @@ app.get("/", (req, res) => {
 });
 
 
-
+app.use(cors());
+app.use(express.json());
 //api routes
 app.use("/api/v1",authRoutes);
 
